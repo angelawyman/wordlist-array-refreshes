@@ -12,33 +12,13 @@
     document.body.innerHTML = randomDairy;
 
 
-    <h1>2. Homework Excuse Generator</h1>
-    <button id="hw_button" onclick="Excuse()">Click here!</button>
-    <div id="excuses"></div>
-
-<div class="container">
-    <div class="wrapper">
-        <h1>Generator words will go here</h1>
-        <div class ="button" onclick="myFunction()"><p>generate me some text</p></div>
-    </div>
-</div>
-
-
-<hr/>
-
-
-<button onclick="randomNumberGenerator()">Display a random number</button>
-<p id="demo1" class="numbers"></p>
-
-<script>
 function randomNumberGenerator() {
 var randomNumber = Math.random();
 document.getElementById("demo1").innerHTML = randomNumber;
 }
-</script>
 
-<!-- <script>
- /* alerting a random pick */
+
+/* alerting a random pick */
 var things = ['Rock', 'Paper', 'Scissor'];
 var thing = things[Math.floor(Math.random()*things.length)];
 alert('Random ' + thing);
@@ -46,14 +26,13 @@ alert('Random ' + thing);
 
 
 
-<!-- <script>
+
 /* onclick event running a function. can you figure out how to randomize the color? */
 window.onclick = colorFun;
 function colorFun() {
     document.getElementsByTagName("body")[0].style.backgroundColor = "hotpink";
 }
-</script> -->
-<script>
+
 
 function Excuse() {
 
@@ -68,13 +47,13 @@ var what = myHomework[Math.round(Math.random()*(myHomework.length-1))];
 document.getElementById('excuses').innerHTML = '<div>My ' + who + ' ' + did + '<br> my ' + what + '.</div>'
 
 }
-</script>
 
 
 
 
 
-<script>
+
+
     //An Array of of around 1000 english words
     var words = ["the", "of", "and", "a", "to", "in", "is", 
     "you", "that", "it", "he", "was", "for", "on", "are", "as",
@@ -256,7 +235,7 @@ document.getElementById('excuses').innerHTML = '<div>My ' + who + ' ' + did + '<
         print(sentence);
     </script>
 
-<script>
+
 //Shuffle Array function
 function shuffleWords(o) {
 for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
@@ -298,23 +277,7 @@ document.getElementById('wordList').innerHTML = arrStr;
             x++;
         }
 arrStr="";
-});</script>
-
-
-
-
-    <!-- <p><a href="https://api.jquery.com/category/ajax/">Working with Ajax</a></p> -->
-</div>
-
-</body>
-</html>
-
-
-
-
-
-
-
+});
 
 
 // random words
