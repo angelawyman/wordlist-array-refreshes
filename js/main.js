@@ -1,3 +1,324 @@
+/* https://api.jquery.com/category/ajax/*/
+
+/* ==========================================================================
+    Random Generators
+ ========================================================================== */
+
+
+/* 1. simple version writes array to inner html*/
+
+    var myArray = [ "Yogurt", "Kefir", "Milkademia"];
+    var randomDairy = myArray[Math.floor(Math.random()*myArray.length)];
+    document.body.innerHTML = randomDairy;
+
+
+    <h1>2. Homework Excuse Generator</h1>
+    <button id="hw_button" onclick="Excuse()">Click here!</button>
+    <div id="excuses"></div>
+
+<div class="container">
+    <div class="wrapper">
+        <h1>Generator words will go here</h1>
+        <div class ="button" onclick="myFunction()"><p>generate me some text</p></div>
+    </div>
+</div>
+
+
+<hr/>
+
+
+<button onclick="randomNumberGenerator()">Display a random number</button>
+<p id="demo1" class="numbers"></p>
+
+<script>
+function randomNumberGenerator() {
+var randomNumber = Math.random();
+document.getElementById("demo1").innerHTML = randomNumber;
+}
+</script>
+
+<!-- <script>
+ /* alerting a random pick */
+var things = ['Rock', 'Paper', 'Scissor'];
+var thing = things[Math.floor(Math.random()*things.length)];
+alert('Random ' + thing);
+</script> -->
+
+
+
+<!-- <script>
+/* onclick event running a function. can you figure out how to randomize the color? */
+window.onclick = colorFun;
+function colorFun() {
+    document.getElementsByTagName("body")[0].style.backgroundColor = "hotpink";
+}
+</script> -->
+<script>
+
+function Excuse() {
+
+var myDog = ['dog', 'cat', 'sense of ennui', 'hamster', 'chinchilla', 'iguana', 'turtle', 'best friend', 'bro', 'boo', 'crush', 'sister', 'brother', 'nemesis', 'doppelganger', 'gerbil', 'bunny', 'fish', 'crew'];
+var ate = ['ate', 'peer-reviewed', 'destroyed', 'deleted', 'erased', 'remixed', 'twitched', 'recycled', 'livetweeted', 'undermined', 'underbid', 'upcycled', 'gave away', 'plagiarised', 'confiscated', 'barfed on', 'stole', 'ransomed', 'spilled water on', 'lost', 'misplaced', 'buried', 'shredded', 'hid', 'liberated', 'left with', 'ebayed', 'craigslisted', 'etsyed', 'tweeted', 'instagrammed', 'snapchatted', 'youtubed', 'dunked on', 'subteweeted', 'favorited', 'upvoted', 'downvoted', 'live cast', 'pinned', 'vlogged', 'blogged about'];
+var myHomework = ['homework', 'project', 'essay', 'film project', 'visualization', 'infographic', 'pre-writing', 'term paper', 'lab report', 'reading log', 'summary', 'article', 'flash cards', 'study guide', 'textbook', 'workbook', 'reading book', 'diorama', 'poster', 'dreams', 'laptop', 'computer', 'tablet', 'momentum', 'report', 'slideshow', 'slide deck', 'presentation', 'worksheet', 'handout', 'notes', 'portfolio', 'blog post', 'comment'];
+
+var who = myDog[Math.round(Math.random()*(myDog.length-1))];
+var did = ate[Math.round(Math.random()*(ate.length-1))];
+var what = myHomework[Math.round(Math.random()*(myHomework.length-1))];
+
+document.getElementById('excuses').innerHTML = '<div>My ' + who + ' ' + did + '<br> my ' + what + '.</div>'
+
+}
+</script>
+
+
+
+
+
+<script>
+    //An Array of of around 1000 english words
+    var words = ["the", "of", "and", "a", "to", "in", "is", 
+    "you", "that", "it", "he", "was", "for", "on", "are", "as",
+     "with", "his", "they", "I", "at", "be", "this", "have", 
+    "from", "or", "one", "had", "by", "words", "but", "not",
+    "what", "all", "were", "we", "when", "your", "can", 
+    "said", "there", "use", "an", "each", "which", "she", 
+    "do", "how", "their", "if", "will", "up", "other", 
+    "about", "out", "many", "then", "them", "these", "so", 
+    "some", "her", "would", "make", "like", "him", "into", 
+    "time", "has", "look", "two", "more", "write", "go", 
+    "see", "number", "no", "way", "could", "people", "my", 
+    "than", "first", "water", "been", "called", "who", "oil",
+     "sit", "now", "find", "long", "down", "day", "did", 
+    "get", "come", "made", "may", "part", "over", "new",
+    "sound", "take", "only", "little", "work", "know", 
+    "place", "years", "live", "me", "back", "give", "most",
+    "very", "after", "things", "our", "just", "name", "good",
+    "sentence", "man", "think", "say", "great", "where",
+    "help", "through", "much", "before", "line", "right",
+    "too", "means", "old", "any", "same", "tell", "boy",
+    "follow", "came", "want", "show", "also", "around",
+    "form", "three", "small", "set", "put", "end", 
+    "does", "another", "well", "large", "must", "big",
+    "even", "such", "because", "turn", "here", "why",
+    "ask", "went", "men", "read", "need", "land", 
+    "different", "home", "us", "move", "try", "kind", 
+    "hand", "picture", "again", "change", "off", 
+    "play", "spell", "air", "away", "animal", "house", 
+    "point", "page", "letter", "mother", "answer", 
+    "found", "study", "still", "learn", "should", 
+    "America", "world", "high", "every", "near", "add", 
+    "food", "between", "own", "below", "country", 
+    "plant", "last", "school", "father", "keep", "tree", 
+    "never", "start", "city", "earth", "eyes", "light", 
+    "thought", "head", "under", "story", "saw", "left", 
+    "don’t", "few", "while", "along", "might", "close", 
+    "something", "seem", "next", "hard", "open", "example", 
+    "begin", "life", "always", "those", "both", "paper", 
+    "together", "got", "group", "often", "run", "important", 
+    "until", "children", "side", "feet", "car", "mile", "night", 
+    "walk", "white", "sea", "began", "grow", "took", "river", 
+    "four", "carry", "state", "once", "book", "hear", "stop", 
+    "without", "second", "late", "miss", "idea", "enough", "eat", 
+    "face", "watch", "far", "Indian", "real", "almost", "let", 
+    "above", "girl", "sometimes", "mountains", "cut", "young", 
+    "talk", "soon", "list", "song", "being", "leave", "family", 
+    "it’s", "body", "music", "color", "stand", "sun", "questions",
+     "fish", "area", "mark", "dog", "horse", "birds", "problem", 
+     "complete", "room", "knew", "since", "ever", "piece", "told", 
+     "usually", "didn’t", "friends", "easy", "heard", "order", 
+     "red", "door", "sure", "become", "top", "ship", "across", 
+     "today", "during", "short", "better", "best", "however", 
+     "low", "hours", "black", "products", "happened", "whole", 
+     "measure", "remember", "early", "waves", "reached", "listen", 
+     "wind", "rock", "space", "covered", "fast", "several", "hold", 
+     "himself", "toward", "five", "step", "morning", "passed", "vowel", 
+     "true", "hundred", "against", "pattern", "numeral", "table", 
+     "north", "slowly", "money", "map", "farm", "pulled", "draw", 
+     "voice", "seen", "cold", "cried", "plan", "notice", "south", 
+     "sing", "war", "ground", "fall", "king", "town", "I’ll", 
+    "unit", "figure", "certain", "field", "travel", "wood", 
+    "fire", "upon", "done", "English", "road", "half", "ten", 
+    "fly", "gave", "box", "finally", "wait", "correct", "oh", 
+    "quickly", "person", "became", "shown", "minutes", "strong", 
+    "verb", "stars", "front", "feel", "fact", "inches", "street", 
+    "decided", "contain", "course", "surface", "produce", 
+    "building", "ocean", "class", "note", "nothing", "rest", 
+    "carefully", "scientists", "inside", "wheels", "stay", 
+    "green", "known", "island", "week", "less", "machine", 
+    "base", "ago", "stood", "plane", "system", "behind", 
+    "ran", "round", "boat", "game", "force", "brought", 
+    "understand", "warm", "common", "bring", "explain", 
+    "dry", "though", "language", "shape", "deep", "thousands", 
+    "yes", "clear", "equation", "yet", "government", "filled", 
+    "heat", "full", "hot", "check", "object", "am", "rule", 
+    "among", "noun", "power", "cannot", "able", "six", "size", 
+    "dark", "ball", "material", "special", "heavy", "fine", 
+    "pair", "circle", "include", "built", "can’t", "matter", 
+    "square", "syllables", "perhaps", "bill", "felt", "suddenly", 
+    "test", "direction", "center", "farmers", "ready", "anything",
+    "divided", "general", "energy", "subject", "Europe", "moon", 
+    "region", "return", "believe", "dance", "members", "picked", "simple", "cells", "paint", "mind", "love", "cause", "rain", 
+    "exercise", "eggs", "train", "blue", "wish", "drop", 
+    "developed", "window", "difference", "distance", "heart", 
+    "site", "sum", "summer", "wall", "forest", "probably", 
+    "legs", "sat", "main", "winter", "wide", "written", 
+    "length", "reason", "kept", "interest", "arms", "brother",
+    "race", "present", "beautiful", "store", "job", "edge",
+    "past", "sign", "record", "finished", "discovered",
+     "wild", "happy", "beside", "gone", "sky", "grass", 
+    "million", "west", "lay", "weather", "root", "instruments",
+    "meet", "third", "months", "paragraph", "raised", 
+    "represent", "soft", "whether", "clothes", "flowers",
+     "shall", "teacher", "held", "describe", "drive", 
+    "cross", "speak", "solve", "appear", "metal", "son",
+    "either", "ice", "sleep", "village", "factors", 
+    "result", "jumped", "snow", "ride", "care", "floor",
+    "hill", "pushed", "baby", "buy", "century", 
+    "outside", "everything", "tall", "already", "instead",
+    "phrase", "soil", "bed", "copy", "free", "hope", 
+    "spring", "case", "laughed", "nation", "quite", 
+     "type", "themselves", "temperature", "bright", 
+     "lead", "everyone", "method", "section", "lake", 
+     "iron", "within", "dictionary", "hair", "age",
+     "amount", "scale", "pounds", "although", "per",
+     "broken", "moment", "tiny", "possible", "gold",
+     "milk", "quiet", "natural", "lot", "stone", "act",
+    "build", "middle", "speed", "count", "consonant",
+     "someone", "sail", "rolled", "bear", "wonder",
+    "smiled", "angle", "fraction", "Africa", 
+     "killed", "melody", "bottom", "trip", "hole", 
+     "poor", "let’s", "fight", "surprise", "French",
+     "died", "beat", "exactly", "remain", "dress",
+    "cat", "couldn’t", "fingers", "row", "least",
+     "catch", "climbed", "wrote", "shouted",
+    "continued", "itself", "else", "plains",
+    "gas", "England", "burning", "design", "joined", 
+     "foot", "law", "ears", "glass", "you’re", "grew", 
+     "skin", "valley", "cents", "key", "president", "brown", 
+     "trouble", "cool", "cloud", "lost", "sent", "symbols", 
+     "wear", "bad", "save", "experiment", "engine", "alone", 
+    "drawing", "east", "choose", "single", "touch", "information",
+    "express", "mouth", "yard", "equal", "decimal", "yourself", 
+    "control", "practice", "report", "straight", "rise", 
+    "statement", "stick", "party", "seeds", "suppose", "woman", 
+    "coast", "bank", "period", "wire", "pay", "clean", "visit", 
+    "bit", "whose", "received", "garden", "please", "strange", 
+    "caught", "fell", "team", "God", "captain", "direct", "ring", 
+    "serve", "child", "desert", "increase", "history", "cost", 
+    "maybe", "business", "separate", "break", "uncle", "hunting", 
+    "flow", "lady", "students", "human", "art", "feeling", "supply", 
+    "corner", "electric", "insects", "crops", "tone", "hit", 
+    "sand", "doctor", "provide", "thus", "won’t", "cook", 
+    "bones", "mall", "board", "modern", "compound", "mine", 
+    "wasn’t", "fit", "addition", "belong", "safe", "soldiers", 
+    "guess", "silent", "trade", "rather", "compare", "crowd", 
+    "poem", "enjoy", "elements", "indicate", "except", "expect", 
+    "flat", "seven", "interesting", "sense", "string", "blow", 
+    "famous", "value", "wings", "movement", "pole", "exciting", 
+    "branches", "thick", "blood", "lie", "spot", "bell", "fun", 
+    "loud", "consider", "suggested", "thin", "position", "entered", 
+    "fruit", "tied", "rich", "dollars", "send", "sight", "chief", 
+    "Japanese", "stream", "planets", "rhythm", "eight", "science", 
+    "major", "observe", "tube", "necessary", "weight", "meat", 
+    "lifted", "process", "army", "hat", "property", "particular", 
+    "swim", "terms", "current", "park", "sell", "shoulder", "industry", 
+    "wash", "block", "spread", "cattle", "wife", "sharp", "company", 
+    "radio", "we’ll", "action", "capital", "factories", "settled", 
+    "yellow", "isn’t", "southern", "truck", "fair", "printed", 
+    "wouldn’t", "ahead", "chance", "born", "level", "triangle", 
+    "molecules", "France", "repeated", "column", "western", "church",
+     "sister", "oxygen", "plural", "various", "agreed", "opposite", 
+     "wrong", "chart", "prepared", "pretty", "solution", "fresh", "shop", 
+     "suffix", "especially", "shoes", "actually", "nose", "afraid", "dead", 
+     "sugar", "adjective", "fig", "office", "huge", "gun", "similar", 
+     "death", "score", "forward", "stretched", "experience", "rose", 
+     "allow", "fear", "workers", "Washington", "Greek", "women", "bought", 
+    "led", "march", "northern", "create", "British", "difficult", "match",
+     "win", "doesn’t", "steel", "total", "deal", "determine", "evening", 
+    "hoe", "rope", "cotton", "apple", "details", "entire", "corn", "substances", 
+     "smell", "tools", "conditions", "cows", "track", "arrived", "located", 
+     "sir", "seat", "division", "effect", "underline", "view"];
+
+
+    function myFunction() {
+        $("h1").html(words[Math.floor(Math.random()*words.length)]);
+        $("h1").append(" ");
+        $("h1").append(words[Math.floor(Math.random()*words.length)]);
+        $("h1").append(" ");
+        $("h1").append(words[Math.floor(Math.random()*words.length)]);
+        $("h1").append(" ");
+        $("h1").append(words[Math.floor(Math.random()*words.length)]);
+        $("h1").append(" ");
+    }
+    $('button').click(function(){
+        $('#output ').empty();
+        var sentence = "<p>The " + noun + " " + verb + " in the " + place + ".</p>";
+        print(sentence);
+    </script>
+
+<script>
+//Shuffle Array function
+function shuffleWords(o) {
+for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+return o;
+};
+
+var arrStr="";
+var numWords = 4;	
+function wordGen(){
+numWords = document.getElementById("numWords").value;
+rwords = shuffleWords(rwords);
+var a = 0;
+while(a < numWords){
+    arrStr = arrStr + ' <span class="savedWords" id="wordspan'+a+'">' + rwords[a] + '</span>';
+    a++;
+}
+};
+
+document.addEventListener('DOMContentLoaded', function () {
+document.getElementById("random-words").addEventListener("click", function () {
+    wordGen();
+    document.getElementById('wordList').innerHTML = arrStr;
+        var x= 0;
+            while(x < numWords){
+            document.getElementById('wordspan'+x).addEventListener("click", function () {
+                document.getElementById("wordPen").appendChild(this);
+            });
+            x++;
+        }	
+    arrStr="";			
+});	
+wordGen();
+document.getElementById('wordList').innerHTML = arrStr;
+        var x= 0;
+            while(x < numWords){
+            document.getElementById('wordspan'+x).addEventListener("click", function () {
+                document.getElementById("wordPen").appendChild(this);
+            });
+            x++;
+        }
+arrStr="";
+});</script>
+
+
+
+
+    <!-- <p><a href="https://api.jquery.com/category/ajax/">Working with Ajax</a></p> -->
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+// random words
+
 var words = ["the", "of", "and", "a", "to", "in", "is", "you", "that", "it", "he", "was", "for", "on", "are", "as", "with", "his", "they", "I", "at", "be", "this", "have", "from", "or", "one", "had", "by", "words", "but", "not", "what", "all", "were", "we", "when", "your", "can", "said", "there", "use", "an", "each", "which", "she", "do", "how", "their", "if", "will", "up", "other", "about", "out", "many", "then", "them", "these", "so", "some", "her", "would", "make", "like", "him", "into", "time", "has", "look", "two", "more", "write", "go", "see", "number", "no", "way", "could", "people", "my", "than", "first", "water", "been", "called", "who", "oil", "sit", "now", "find", "long", "down", "day", "did", "get", "come", "made", "may", "part", "over", "new", "sound", "take", "only", "little", "work", "know", "place", "years", "live", "me", "back", "give", "most", "very", "after", "things", "our", "just", "name", "good", "sentence", "man", "think", "say", "great", "where", "help", "through", "much", "before", "line", "right", "too", "means", "old", "any", "same", "tell", "boy", "follow", "came", "want", "show", "also", "around", "form", "three", "small", "set", "put", "end", "does", "another", "well", "large", "must", "big", "even", "such", "because", "turn", "here", "why", "ask", "went", "men", "read", "need", "land", "different", "home", "us", "move", "try", "kind", "hand", "picture", "again", "change", "off", "play", "spell", "air", "away", "animal", "house", "point", "page", "letter", "mother", "answer", "found", "study", "still", "learn", "should", "America", "world", "high", "every", "near", "add", "food", "between", "own", "below", "country", "plant", "last", "school", "father", "keep", "tree", "never", "start", "city", "earth", "eyes", "light", "thought", "head", "under", "story", "saw", "left", "don’t", "few", "while", "along", "might", "close", "something", "seem", "next", "hard", "open", "example", "begin", "life", "always", "those", "both", "paper", "together", "got", "group", "often", "run", "important", "until", "children", "side", "feet", "car", "mile", "night", "walk", "white", "sea", "began", "grow", "took", "river", "four", "carry", "state", "once", "book", "hear", "stop", "without", "second", "late", "miss", "idea", "enough", "eat", "face", "watch", "far", "Indian", "real", "almost", "let", "above", "girl", "sometimes", "mountains", "cut", "young", "talk", "soon", "list", "song", "being", "leave", "family", "it’s", "body", "music", "color", "stand", "sun", "questions", "fish", "area", "mark", "dog", "horse", "birds", "problem", "complete", "room", "knew", "since", "ever", "piece", "told", "usually", "didn’t", "friends", "easy", "heard", "order", "red", "door", "sure", "become", "top", "ship", "across", "today", "during", "short", "better", "best", "however", "low", "hours", "black", "products", "happened", "whole", "measure", "remember", "early", "waves", "reached", "listen", "wind", "rock", "space", "covered", "fast", "several", "hold", "himself", "toward", "five", "step", "morning", "passed", "vowel", "true", "hundred", "against", "pattern", "numeral", "table", "north", "slowly", "money", "map", "farm", "pulled", "draw", "voice", "seen", "cold", "cried", "plan", "notice", "south", "sing", "war", "ground", "fall", "king", "town", "I’ll", "unit", "figure", "certain", "field", "travel", "wood", "fire", "upon", "done", "English", "road", "half", "ten", "fly", "gave", "box", "finally", "wait", "correct", "oh", "quickly", "person", "became", "shown", "minutes", "strong", "verb", "stars", "front", "feel", "fact", "inches", "street", "decided", "contain", "course", "surface", "produce", "building", "ocean", "class", "note", "nothing", "rest", "carefully", "scientists", "inside", "wheels", "stay", "green", "known", "island", "week", "less", "machine", "base", "ago", "stood", "plane", "system", "behind", "ran", "round", "boat", "game", "force", "brought", "understand", "warm", "common", "bring", "explain", "dry", "though", "language", "shape", "deep", "thousands", "yes", "clear", "equation", "yet", "government", "filled", "heat", "full", "hot", "check", "object", "am", "rule", "among", "noun", "power", "cannot", "able", "six", "size", "dark", "ball", "material", "special", "heavy", "fine", "pair", "circle", "include", "built", "can’t", "matter", "square", "syllables", "perhaps", "bill", "felt", "suddenly", "test", "direction", "center", "farmers", "ready", "anything", "divided", "general", "energy", "subject", "Europe", "moon", "region", "return", "believe", "dance", "members", "picked", "simple", "cells", "paint", "mind", "love", "cause", "rain", "exercise", "eggs", "train", "blue", "wish", "drop", "developed", "window", "difference", "distance", "heart", "site", "sum", "summer", "wall", "forest", "probably", "legs", "sat", "main", "winter", "wide", "written", "length", "reason", "kept", "interest", "arms", "brother", "race", "present", "beautiful", "store", "job", "edge", "past", "sign", "record", "finished", "discovered", "wild", "happy", "beside", "gone", "sky", "grass", "million", "west", "lay", "weather", "root", "instruments", "meet", "third", "months", "paragraph", "raised", "represent", "soft", "whether", "clothes", "flowers", "shall", "teacher", "held", "describe", "drive", "cross", "speak", "solve", "appear", "metal", "son", "either", "ice", "sleep", "village", "factors", "result", "jumped", "snow", "ride", "care", "floor", "hill", "pushed", "baby", "buy", "century", "outside", "everything", "tall", "already", "instead", "phrase", "soil", "bed", "copy", "free", "hope", "spring", "case", "laughed", "nation", "quite", "type", "themselves", "temperature", "bright", "lead", "everyone", "method", "section", "lake", "iron", "within", "dictionary", "hair", "age", "amount", "scale", "pounds", "although", "per", "broken", "moment", "tiny", "possible", "gold", "milk", "quiet", "natural", "lot", "stone", "act", "build", "middle", "speed", "count", "consonant", "someone", "sail", "rolled", "bear", "wonder", "smiled", "angle", "fraction", "Africa", "killed", "melody", "bottom", "trip", "hole", "poor", "let’s", "fight", "surprise", "French", "died", "beat", "exactly", "remain", "dress", "cat", "couldn’t", "fingers", "row", "least", "catch", "climbed", "wrote", "shouted", "continued", "itself", "else", "plains", "gas", "England", "burning", "design", "joined", "foot", "law", "ears", "glass", "you’re", "grew", "skin", "valley", "cents", "key", "president", "brown", "trouble", "cool", "cloud", "lost", "sent", "symbols", "wear", "bad", "save", "experiment", "engine", "alone", "drawing", "east", "choose", "single", "touch", "information", "express", "mouth", "yard", "equal", "decimal", "yourself", "control", "practice", "report", "straight", "rise", "statement", "stick", "party", "seeds", "suppose", "woman", "coast", "bank", "period", "wire", "pay", "clean", "visit", "bit", "whose", "received", "garden", "please", "strange", "caught", "fell", "team", "God", "captain", "direct", "ring", "serve", "child", "desert", "increase", "history", "cost", "maybe", "business", "separate", "break", "uncle", "hunting", "flow", "lady", "students", "human", "art", "feeling", "supply", "corner", "electric", "insects", "crops", "tone", "hit", "sand", "doctor", "provide", "thus", "won’t", "cook", "bones", "mall", "board", "modern", "compound", "mine", "wasn’t", "fit", "addition", "belong", "safe", "soldiers", "guess", "silent", "trade", "rather", "compare", "crowd", "poem", "enjoy", "elements", "indicate", "except", "expect", "flat", "seven", "interesting", "sense", "string", "blow", "famous", "value", "wings", "movement", "pole", "exciting", "branches", "thick", "blood", "lie", "spot", "bell", "fun", "loud", "consider", "suggested", "thin", "position", "entered", "fruit", "tied", "rich", "dollars", "send", "sight", "chief", "Japanese", "stream", "planets", "rhythm", "eight", "science", "major", "observe", "tube", "necessary", "weight", "meat", "lifted", "process", "army", "hat", "property", "particular", "swim", "terms", "current", "park", "sell", "shoulder", "industry", "wash", "block", "spread", "cattle", "wife", "sharp", "company", "radio", "we’ll", "action", "capital", "factories", "settled", "yellow", "isn’t", "southern", "truck", "fair", "printed", "wouldn’t", "ahead", "chance", "born", "level", "triangle", "molecules", "France", "repeated", "column", "western", "church", "sister", "oxygen", "plural", "various", "agreed", "opposite", "wrong", "chart", "prepared", "pretty", "solution", "fresh", "shop", "suffix", "especially", "shoes", "actually", "nose", "afraid", "dead", "sugar", "adjective", "fig", "office", "huge", "gun", "similar", "death", "score", "forward", "stretched", "experience", "rose", "allow", "fear", "workers", "Washington", "Greek", "women", "bought", "led", "march", "northern", "create", "British", "difficult", "match", "win", "doesn’t", "steel", "total", "deal", "determine", "evening", "hoe", "rope", "cotton", "apple", "details", "entire", "corn", "substances", "smell", "tools", "conditions", "cows", "track", "arrived", "located", "sir", "seat", "division", "effect", "underline", "view"];
 
 $("p").html(words[Math.floor(Math.random()*words.length)]);
