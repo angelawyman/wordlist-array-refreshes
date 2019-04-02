@@ -84,18 +84,18 @@ But, what if you want to generate whole random numbers, say between 0 and 10? </
 
 <p>Now you know how to generate random whole numbers within a specific range. How could this help you select a random word from a list of words? You will need to construct a list of words that are indexed by whole numbers – known as an array.</p>
 
-<h3>using .innerHTML</h3>
- innerHTML with one of the variables from the array, you can make a random word appear.
+<h3>HTML DOM innerHTML Property</h3>
+ innerHTML with one of the variables from the array, you can make a random word appear.The innerHTML property sets or returns the HTML content (inner HTML) of an element.
+
 
 <h3>JQuery CSS Method</h3>
 <p>The css() method sets or returns one or more style properties for the selected elements.</p>
 <a href="https://www.w3schools.com/jquery/jquery_css.asp">W3Schools</a>
 
-
-
 </div>
 </div>
 </section>
+
 
 
 <section id ="second">
@@ -104,12 +104,12 @@ But, what if you want to generate whole random numbers, say between 0 and 10? </
 <h2>2. How to Employ an Array</h2>
 <script>
 function randomList() {
-    var things = ['🎸 Rock ', '📄 Paper ', '✂️ Scissor '];
+    var things = ['Rock ', 'Paper ', ' Scissor '];
     var thing = things[Math.floor(Math.random()*things.length)];
     document.getElementById("demo-3").innerHTML = thing;
     }
 </script>
-
+<!-- 🎸 📄 ✂️ -->
 <button onclick="randomList()">Rock, Paper, Scissors?</button>
 <span id="demo-3" class="numbers"></span>
 
@@ -138,9 +138,7 @@ function randomList() {
 
 
 <script>
-
     function excuses() {
-        
         var myDog = ['dog', 'cat', 'sense of ennui', 'hamster', 'chinchilla', 'iguana', 'turtle', 'best friend', 'bro', 'boo', 'crush', 'sister', 'brother', 'nemesis', 'doppelganger', 'gerbil', 'bunny', 'fish', 'crew'];
 
         var ate = ['ate', 'peer-reviewed', 'destroyed', 'deleted', 'erased', 'remixed', 'twitched', 'recycled', 'livetweeted', 'undermined', 'underbid', 'upcycled', 'gave away', 'plagiarised', 'confiscated', 'barfed on', 'stole', 'ransomed', 'spilled water on', 'lost', 'misplaced', 'buried', 'shredded', 'hid', 'liberated', 'left with', 'ebayed', 'craigslisted', 'etsyed', 'tweeted', 'instagrammed', 'snapchatted', 'youtubed', 'dunked on', 'subteweeted', 'favorited', 'upvoted', 'downvoted', 'live cast', 'pinned', 'vlogged', 'blogged about'];
@@ -151,8 +149,7 @@ var who = myDog[Math.round(Math.random()*(myDog.length-1))];
 var did = ate[Math.round(Math.random()*(ate.length-1))];
 var what = myHomework[Math.round(Math.random()*(myHomework.length-1))];
 
-document.getElementById('excuses').innerHTML = '<div>My ' + who + ' ' + did + '<br> my ' + what + '.</div>'
-        
+document.getElementById('excuses').innerHTML = '<div>My ' + who + ' ' + did + '<br> my ' + what + '.</div>'       
 }
 </script>
 
@@ -165,13 +162,14 @@ document.getElementById('excuses').innerHTML = '<div>My ' + who + ' ' + did + '<
 <section id = "fourth">
         <div class="container">
                 <div class="wrapper">
-                    <h3>What Happens When I Click the Window?</
- <script>
-    /* onclick event running a function. can you figure out how to randomize the color? */
+                    <h3>What Happens When I Click the Window?</h3>
+<script>
+    /* STUDENT CHALLENGE This is an onclick event running a function. can you figure out how to randomize the color?  If the user clicks in the window, set the background color of <body> to hotpink */
 window.onclick = colorFun;
+
     function colorFun() {
         document.getElementsByTagName("body")[0].style.backgroundColor = "hotpink";
-    }
+}
 </script> 
 
 
@@ -181,7 +179,6 @@ window.onclick = colorFun;
 <section id ="fifth">
         <div class="container">
                 <div class="wrapper">
-
 
     <script>
         //An array of of around 1000 english words
@@ -363,7 +360,7 @@ window.onclick = colorFun;
             $('#output ').empty();
             var sentence = "<p>The " + noun + " " + verb + " in the " + place + ".</p>";
             print(sentence);
-        </script>
+</script>
 
 <script>
 //Shuffle Array function
